@@ -1,0 +1,22 @@
+class Chain{
+    constructor(bodyA,bodyB){
+        var Option = {
+            bodyA:bodyA,
+            bodyB:bodyB,
+            length:10,
+            stiffness:0.04,
+        
+        }    
+        this.chain = Constraint.create(Option);
+World.add(world,this.chain);
+    }
+    display(){
+        strokeWeight(3);
+        line(this.chain.bodyA.position.x,this.chain.bodyA.position.y,this.chain.bodyB.position.x,this.chain.bodyB.position.y);
+    
+
+
+
+
+    }
+}
